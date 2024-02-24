@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador Versão 2</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/qr.png" type="image/x-icon">
+
+</head>
+</head>
+<body>
+    <header>
+        <img src="assets/logo_desktop.svg" alt="Logo Letra A da empresa Alura">
+
+    </header>
+
+    <main class="container">
+        <section class="container_text_btn">
+            <textarea id="input_textarea" name="textinho" cols="20" rows="10" maxlength="250" placeholder="Digite seu texto..."></textarea>
+
+            <div id="icon">
+                <img src="/assets/bi_exclamation-circle-fill.svg"> 
+                        
+                <p id="msg_erro">
+                    Apenas letras minúsculas e sem acento.
+                </p>    
+            </div>
+
+            <div class="container_btns">
+                <a href="#" onclick="criptografar()" class="container_background_btn" id='btn1' >Criptografar</a>
+                <a href="#" onclick="descriptografar()" class="container_background_btn" id='btn2'> Descriptografar</a>
+
+            </div>
+
+        </section>
+
+        <aside class="container_img">
+            <div class="container_img2" id="cont_img2" >
+                <div id="texto_espelhado" >
+
+                </div>
+                <div class="container_text_descrip_msg" id="output_cripto">
+                    
+                    <img id="img_none" src="assets/img_person.svg" alt="Rapaz ajoelhado segurando uma lupa olhando diamante" >
+                    
+                    <div class="text_p">
+                        <p id="p1" >
+                            Nenhuma mensagem encontrada
+                        </p>
+                        <p>
+                            Digite um texto que você deseja criptografar ou descriptografar.
+                        </p>
+                    </div>
+                   
+
+                </div>
+                
+                
+                <a href="#" onclick="copyText()" id='btn3' style="display:none;"  class="content_background_btn"> Copiar</a>
+
+                
+            </div>
+
+               
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>
+            Alura Challenge by
+            <a href="https://github.com/ROBBIENOG">Roberta Nogueira</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
