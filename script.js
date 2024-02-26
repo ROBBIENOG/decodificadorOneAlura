@@ -13,11 +13,11 @@ document.getElementById('input_textarea').addEventListener('input', function() {
 
 
 
-function testandoTexto(){
+function testandoTexto(entradaTexto){
     
     let erro = document.getElementById('icon');
 
-    if (!entradaTexto || entradaTexto.length === 0 || entradaTexto == ' ') { 
+    if (!entradaTexto || entradaTexto.trim().length === 0) { 
         document.getElementById('msg_erro').innerText = 'Nenhuma mensagem encontrada';
         erro.style.color = 'red';
         return;
@@ -72,10 +72,22 @@ function descriptografar (){
 function copyText(){
     criptografar();
 
-    let Copy = document.getElementById('input_textarea');
-    Copy.select();
+    let copy = document.getElementById('texto_espelhado');
+    let range = document.createRange();
+    range.selectNodeContents(copy);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
 
-    navigator.clipboard.writeText(Copy.innerText);
+    try{
+        let sucess = document.execCommand('copy');
+        if(sucess){
+            alert('Texto copiado', copy);
+        }else{
+            alert('Erro ao copiar o texto');
+        }
+    } catch (err){
+        console.log('Erro ao copiar o texto', err) 
+    }
 
-    alert('Texto copiado');
+    window.getSelection().removeAllRanges();
 }
