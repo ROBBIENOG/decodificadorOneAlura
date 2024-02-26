@@ -22,7 +22,7 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: 12% 85%;
     height: 100vh;
-    width: 100vw; 
+    width: 100%; 
     
 }
 
@@ -42,7 +42,7 @@ header img{
     display: grid;
     grid-template-columns: 2fr 1fr; 
     padding-left: 240px;
-    
+    width: 100%;
 }
 
 .container textarea{
@@ -192,13 +192,17 @@ footer a:hover{
     color: red;
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 412px){
     body{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100vh;
-        width: 100vw; 
+        width: 100%; 
+    }
+
+    section, aside{
+        width: 60%;
     }
 
     .container{
@@ -233,7 +237,11 @@ footer a:hover{
     }
 
     #btn3{
-        width: 290px;
+        width: 80%;
+    }
+
+    footer{
+        width: 100%;
     }
 
     
@@ -246,7 +254,7 @@ footer a:hover{
         flex-direction: column;
         justify-content: space-between;
         height: 100vh;
-        width: 100vw; 
+        width: 100%; 
     }
     
     .container{
@@ -257,6 +265,10 @@ footer a:hover{
         position: static;
         gap: 30px;
 
+    }
+
+    section, aside{
+        width: 100%;
     }
 
     #img_none{
@@ -278,7 +290,9 @@ footer a:hover{
         border: none;
     }
 
-   
+   footer{
+    width: 100%;
+   }
 
     
 
